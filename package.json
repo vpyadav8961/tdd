@@ -1,0 +1,27 @@
+{
+  "name": "tdd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vpyadav8961/tdd.git"
+  },
+  "author": "Ved Prakash Yadav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vpyadav8961/tdd/issues"
+  },
+  "homepage": "https://github.com/vpyadav8961/tdd#readme",
+  "dependencies": {
+    "typescript": "^5.7.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5"
+  }
+}
