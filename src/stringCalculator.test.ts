@@ -26,5 +26,15 @@ describe("Calculator", () => {
         expect(() => add("3, -9, -1")).toThrow("negative numbers not allowed -9, -1");
         expect(() => add("\n4\n-8, 9")).toThrow("negative numbers not allowed -8")
     })
+
+    it("Handle custom delimiters // | ;", () => {
+        expect(add("//;\n1;2")).toBe(3);
+        expect(add("//|\n1|2|3")).toBe(6);
+      });
+
+      it("Handle custom delimiters with special characters", () => {
+        expect(add("//.\n40.5.6")).toBe(51);
+        expect(add("//$\n70$8$9")).toBe(87);
+      });
 })
 
