@@ -20,5 +20,11 @@ describe("Calculator", () => {
         expect(add("1\n4\n6")).toBe(11);
         expect(add("1\n4,6 \n 2")).toBe(13);
     })
+
+    it("Retrun exception if any negative number found in string", () => {
+        expect(() => add("1, -4, 6")).toThrow("negative numbers not allowed -4");
+        expect(() => add("3, -9, -1")).toThrow("negative numbers not allowed -9, -1");
+        expect(() => add("\n4\n-8, 9")).toThrow("negative numbers not allowed -8")
+    })
 })
 
