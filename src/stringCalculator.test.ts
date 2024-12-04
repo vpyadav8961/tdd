@@ -15,5 +15,10 @@ describe("Calculator", () => {
         expect(add("1,8,9")).toBe(18);
         expect(add("2, 6, 8")).toBe(16);
     })
+
+    it("Return sum of number for new line string", () => {
+        expect(add("1\n4\n6")).toBe(11);
+        expect(add("1\n4,6 \n 2")).toBe(13);
+    })
 })
 

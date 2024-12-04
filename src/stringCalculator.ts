@@ -3,7 +3,7 @@ export function add(number: string): number {
 
     if(number.length == 1) return parseInt(number);
 
-    let num = number.split(",").map(Number); 
+    let num = number.split(/,|\n/).map(Number); 
     let sum = num.reduce((a, c) => a + c, 0);
     return sum;
 }
