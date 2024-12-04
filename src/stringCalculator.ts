@@ -1,5 +1,9 @@
-export function add(number: string){
-    if(!number) return 0;
+export function add(number: string): number {
+    if(!number.trim()) return 0;
 
     if(number.length == 1) return parseInt(number);
+
+    let num = number.split(",").map(Number); 
+    let sum = num.reduce((a, c) => a + c, 0);
+    return sum;
 }
