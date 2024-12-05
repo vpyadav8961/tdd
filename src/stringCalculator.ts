@@ -20,6 +20,6 @@ export function add(number: string): number {
     if(negativeNumbers.length > 0){
         throw new Error(`negative numbers not allowed ${negativeNumbers.join(", ")}`);
     } 
-    let sum = num.reduce((a, c) => a + c, 0);
+    let sum = num.reduce((a, c) => a + (isNaN(c)? 0: c), 0);
     return sum;
 }
